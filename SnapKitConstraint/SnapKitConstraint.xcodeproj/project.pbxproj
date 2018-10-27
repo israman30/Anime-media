@@ -105,11 +105,9 @@
 		8D93C63E216857B1009B9BB7 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8DDC03312184E18A00462858 /* defaults */,
 				8DB1E175216E62DA005E687A /* Play */,
 				8DB1E16E21699B1A005E687A /* Hero */,
-				8D79F6EE216522EE009DD421 /* ViewController.swift */,
-				8D79F6FE21652A83009DD421 /* TableViewSample.swift */,
-				8D79F70021653313009DD421 /* ThirdSample.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -153,6 +151,16 @@
 				8DB1E17A216E6A27005E687A /* Gallery.swift */,
 			);
 			path = Play;
+			sourceTree = "<group>";
+		};
+		8DDC03312184E18A00462858 /* defaults */ = {
+			isa = PBXGroup;
+			children = (
+				8D79F6EE216522EE009DD421 /* ViewController.swift */,
+				8D79F6FE21652A83009DD421 /* TableViewSample.swift */,
+				8D79F70021653313009DD421 /* ThirdSample.swift */,
+			);
+			path = defaults;
 			sourceTree = "<group>";
 		};
 		B15654642BCA8C0006F34FDC /* Pods */ = {
