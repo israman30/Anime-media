@@ -16,7 +16,7 @@ struct VideoModel {
     func getVideos(completion: @escaping()->()) -> [VideoModel]{
         let videos = [
             VideoModel(video: "ScV5tNmHbgw"),
-            VideoModel(video: "video two"),
+            VideoModel(video: "https://www.youtube.com/embed/ScV5tNmHbgw"),
             VideoModel(video: "video three"),
             VideoModel(video: "video four")
         ]

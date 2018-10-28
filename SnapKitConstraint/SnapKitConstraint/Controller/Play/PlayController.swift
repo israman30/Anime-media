@@ -82,8 +82,9 @@ class PlayController: UIViewController, UICollectionViewDelegateFlowLayout, UICo
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "display", for: indexPath) as! VideoCell
         cell.backgroundColor = .clear
-        cell.videowebView.backgroundColor = .cyan
+        
         cell.containerView.backgroundColor = .yellow
+        
         return cell
     }
     
@@ -106,17 +107,24 @@ class VideoCell: UICollectionViewCell {
         return view
     }()
     
-    let videowebView: UIWebView = {
-        let wv = UIWebView()
-        wv.backgroundColor = .red
-        wv.layer.borderColor = UIColor.darkGray.cgColor
-        wv.layer.borderWidth = 2
-        return wv
-    }()
-    
+//    var videowebView: UImageView = {
+//        let wv = UImageView()
+//        wv.backgroundColor = .red
+//        wv.layer.borderColor = UIColor.darkGray.cgColor
+//        wv.layer.borderWidth = 2
+//        return wv
+//    }()
+//    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setVideoCellView()
+    }
+    
+    func getVideo(_ id: String) {
+        let url = URL(string: "https://www.youtube.com/embed/\(id)")
+        DispatchQueue.main.async {
+            self.videowebView.loadRequest(URLRequest(url: url!))
+        }
     }
     
     func setVideoCellView(){
