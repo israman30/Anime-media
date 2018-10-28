@@ -25,6 +25,7 @@
 		8DB1E17B216E6A27005E687A /* Gallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB1E17A216E6A27005E687A /* Gallery.swift */; };
 		8DB1E17D216E6BD1005E687A /* HerosDelegate+Datasource+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB1E17C216E6BD0005E687A /* HerosDelegate+Datasource+Ext.swift */; };
 		8DDC0333218544B300462858 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDC0332218544B300462858 /* DetailView.swift */; };
+		8DDC03352185663000462858 /* VideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDC03342185663000462858 /* VideoModel.swift */; };
 		EDD28110E882D4EF664CE798 /* Pods_SnapKitConstraint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 603A95A9D985786C646FB7E7 /* Pods_SnapKitConstraint.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		8DB1E17A216E6A27005E687A /* Gallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gallery.swift; sourceTree = "<group>"; };
 		8DB1E17C216E6BD0005E687A /* HerosDelegate+Datasource+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HerosDelegate+Datasource+Ext.swift"; sourceTree = "<group>"; };
 		8DDC0332218544B300462858 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		8DDC03342185663000462858 /* VideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoModel.swift; sourceTree = "<group>"; };
 		ED80AB2D288A424D60B63657 /* Pods-SnapKitConstraint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapKitConstraint.release.xcconfig"; path = "Pods/Target Support Files/Pods-SnapKitConstraint/Pods-SnapKitConstraint.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -131,6 +133,7 @@
 			children = (
 				8D93C641216857E2009B9BB7 /* HeroModel.swift */,
 				8DB1E171216BC777005E687A /* GifHelper.swift */,
+				8DDC03342185663000462858 /* VideoModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				8D93C63D216844C0009B9BB7 /* FourthSample.swift in Sources */,
 				8D93C6462168585D009B9BB7 /* HeroView.swift in Sources */,
 				8DB1E172216BC777005E687A /* GifHelper.swift in Sources */,
+				8DDC03352185663000462858 /* VideoModel.swift in Sources */,
 				8D79F70121653313009DD421 /* ThirdSample.swift in Sources */,
 				8DDC0333218544B300462858 /* DetailView.swift in Sources */,
 				8DB1E174216E6114005E687A /* SideViewAction+Ext.swift in Sources */,
