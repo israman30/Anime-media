@@ -13,12 +13,11 @@ class DetailHeros: UIViewController {
     
     var heroe: Heroes!
     
+    var heightConstraint:NSLayoutConstraint?
+    
     let detailContainerView: UIImageView = {
         let view = UIImageView()
         view.backgroundColor = UIColor(red: 44/255, green: 43/255, blue: 43/255, alpha: 1)
-//        view.image = UIImage(named: "attack")
-//        view.contentMode = .scaleAspectFill
-//        view.clipsToBounds = true
         return view
     }()
     
@@ -81,8 +80,18 @@ class DetailHeros: UIViewController {
             self.webView.loadRequest(URLRequest(url: url!))
         }
     }
-    
-    var heightConstraint:NSLayoutConstraint?
+}
+
+//extension DetailHeros {
+//    func getVideo(_ id: String) {
+//        let url = URL(string: "https://www.youtube.com/embed/\(id)")
+//        DispatchQueue.main.async {
+//            self.webView.loadRequest(URLRequest(url: url!))
+//        }
+//    }
+//}
+
+extension DetailHeros {
     
     func setDetailHeroView(){
         view.backgroundColor = .white
@@ -117,7 +126,7 @@ class DetailHeros: UIViewController {
         commentDetailView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0).isActive = true
         commentDetailView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0).isActive = true
         commentDetailView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -10).isActive
-         = true
+            = true
         heightConstraint = commentDetailView.heightAnchor.constraint(equalToConstant: 450)
         
         heightConstraint?.isActive = true
