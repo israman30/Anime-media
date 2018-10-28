@@ -11,6 +11,8 @@ import SnapKit
 
 class PlayController: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource {
     
+    var videos: [VideoModel]!
+    
     let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -36,6 +38,10 @@ class PlayController: UIViewController, UICollectionViewDelegateFlowLayout, UICo
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        videos = VideoModel.shared.getVideos {
+            self.collectionView.reloadData()
+        }
         
         setBackgroundVideoView()
         setVideoCollectionView()
@@ -70,13 +76,13 @@ class PlayController: UIViewController, UICollectionViewDelegateFlowLayout, UICo
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return videos.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "display", for: indexPath) as! VideoCell
         cell.backgroundColor = .clear
-        
+        cell.videowebView.backgroundColor = .cyan
         cell.containerView.backgroundColor = .yellow
         return cell
     }
@@ -100,6 +106,14 @@ class VideoCell: UICollectionViewCell {
         return view
     }()
     
+    let videowebView: UIWebView = {
+        let wv = UIWebView()
+        wv.backgroundColor = .red
+        wv.layer.borderColor = UIColor.darkGray.cgColor
+        wv.layer.borderWidth = 2
+        return wv
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setVideoCellView()
@@ -107,10 +121,15 @@ class VideoCell: UICollectionViewCell {
     
     func setVideoCellView(){
         addSubview(containerView)
+        containerView.addSubview(videowebView)
         containerView.snp.makeConstraints { (make) in
             make.left.equalTo(10)
             make.top.equalTo(15)
             make.right.bottom.equalTo(-10)
+        }
+        
+        videowebView.snp.makeConstraints { (make) in
+            make.top.left.right.bottom.equalTo(containerView)
         }
     }
     

@@ -13,10 +13,12 @@ struct VideoModel {
     
     static let shared = VideoModel()
     
-    func getVideos() -> [VideoModel]{
+    func getVideos(completion: @escaping()->()) -> [VideoModel]{
         let videos = [
-            VideoModel(video: "video one"),
-            VideoModel(video: "video two")
+            VideoModel(video: "ScV5tNmHbgw"),
+            VideoModel(video: "video two"),
+            VideoModel(video: "video three"),
+            VideoModel(video: "video four")
         ]
         return videos
     }
