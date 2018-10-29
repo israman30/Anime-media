@@ -107,43 +107,25 @@ class VideoCell: UICollectionViewCell {
         return view
     }()
     
-//    var videowebView: UImageView = {
-//        let wv = UImageView()
-//        wv.backgroundColor = .red
-//        wv.layer.borderColor = UIColor.darkGray.cgColor
-//        wv.layer.borderWidth = 2
-//        return wv
-//    }()
-//    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setVideoCellView()
     }
     
-    func getVideo(_ id: String) {
-        let url = URL(string: "https://www.youtube.com/embed/\(id)")
-        DispatchQueue.main.async {
-            self.videowebView.loadRequest(URLRequest(url: url!))
-        }
-    }
-    
     func setVideoCellView(){
         addSubview(containerView)
-        containerView.addSubview(videowebView)
         containerView.snp.makeConstraints { (make) in
             make.left.equalTo(10)
             make.top.equalTo(15)
             make.right.bottom.equalTo(-10)
         }
-        
-        videowebView.snp.makeConstraints { (make) in
-            make.top.left.right.bottom.equalTo(containerView)
-        }
     }
-    
+        
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    
 }
 
 
